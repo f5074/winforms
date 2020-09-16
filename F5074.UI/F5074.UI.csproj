@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\A_Zoom\ZoomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\A_Zoom\ZoomForm.Designer.cs">
+      <DependentUpon>ZoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\B_Console\EnableConsole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\B_Console\EnableConsole.Designer.cs">
+      <DependentUpon>EnableConsole.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DataTable\DataTable01.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +77,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\A_Zoom\ZoomForm.resx">
+      <DependentUpon>ZoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\F5074.Common\F5074.Common.csproj">
+      <Project>{E0BC19BD-DF46-487E-B3AE-2B9DE79D1B69}</Project>
+      <Name>F5074.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

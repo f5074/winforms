@@ -29,30 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.treeView1 = new F5074.Common.Controls.BaseTreeView();
             this.tabControl1 = new F5074.Common.Controls.BaseTabControl();
+            this.treeView1 = new F5074.Common.Controls.BaseTreeView();
+            this.baseMenuStrip1 = new F5074.Common.Controls.BaseMenuStrip();
             this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(121, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1207, 615);
+            this.tabControl1.TabIndex = 1;
             // 
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.ImageIndex = 0;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Location = new System.Drawing.Point(0, 24);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.ShowPlusMinus = false;
             this.treeView1.ShowRootLines = false;
-            this.treeView1.Size = new System.Drawing.Size(121, 639);
+            this.treeView1.Size = new System.Drawing.Size(121, 615);
             this.treeView1.TabIndex = 0;
             // 
-            // tabControl1
+            // baseMenuStrip1
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(121, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1207, 639);
-            this.tabControl1.TabIndex = 1;
+            this.baseMenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.baseMenuStrip1.Name = "baseMenuStrip1";
+            this.baseMenuStrip1.Size = new System.Drawing.Size(1328, 24);
+            this.baseMenuStrip1.TabIndex = 2;
+            this.baseMenuStrip1.Text = "baseMenuStrip1";
             // 
             // Form1
             // 
@@ -61,9 +70,12 @@
             this.ClientSize = new System.Drawing.Size(1328, 639);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.baseMenuStrip1);
+            this.MainMenuStrip = this.baseMenuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,6 +83,7 @@
 
         private Common.Controls.BaseTreeView treeView1;
         private Common.Controls.BaseTabControl tabControl1;
+        private Common.Controls.BaseMenuStrip baseMenuStrip1;
     }
 }
 

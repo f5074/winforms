@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations\ValueAttribute.cs" />
     <Compile Include="Controls\BaseButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -67,6 +68,12 @@
     </Compile>
     <Compile Include="Controls\BaseChart.Designer.cs">
       <DependentUpon>BaseChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseDataGridView.Designer.cs">
+      <DependentUpon>BaseDataGridView.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\BaseMenuStrip.cs">
       <SubType>Component</SubType>
@@ -86,6 +93,12 @@
     <Compile Include="Controls\BaseTabControl.Designer.cs">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseTextBox.Designer.cs">
+      <DependentUpon>BaseTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -104,7 +117,14 @@
     <Compile Include="Controls\ZoomControl.Designer.cs">
       <DependentUpon>ZoomControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extension\AssemblyExtension.cs" />
+    <Compile Include="Extension\EnumExtension.cs" />
+    <Compile Include="Extension\IEnumerableExtension.cs" />
+    <Compile Include="Helper\DataTableHelper.cs" />
+    <Compile Include="Model\IParameterizable.cs" />
+    <Compile Include="Model\UserComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Utilities.cs" />
     <EmbeddedResource Include="Controls\FormStatusBar.resx">
       <DependentUpon>FormStatusBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,8 +150,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extension\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

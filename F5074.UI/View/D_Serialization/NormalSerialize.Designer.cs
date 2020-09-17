@@ -1,6 +1,6 @@
-﻿namespace F5074.UI.View.DataTable
+﻿namespace F5074.UI.View.D_Serialization
 {
-    partial class DataTable01
+    partial class NormalSerialize
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -24,38 +24,36 @@
 
         /// <summary> 
         /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
         /// </summary>
         private void InitializeComponent()
         {
-            this.baseDataGridView1 = new F5074.Common.Controls.BaseDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDataGridView1)).BeginInit();
+            this.baseButton1 = new F5074.Common.Controls.BaseButton();
             this.SuspendLayout();
             // 
-            // baseDataGridView1
+            // baseButton1
             // 
-            this.baseDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.baseDataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.baseDataGridView1.Name = "baseDataGridView1";
-            this.baseDataGridView1.RowTemplate.Height = 23;
-            this.baseDataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.baseDataGridView1.TabIndex = 0;
+            this.baseButton1.Location = new System.Drawing.Point(0, 0);
+            this.baseButton1.Name = "baseButton1";
+            this.baseButton1.Size = new System.Drawing.Size(75, 23);
+            this.baseButton1.TabIndex = 0;
+            this.baseButton1.Text = "baseButton1";
+            this.baseButton1.UseVisualStyleBackColor = true;
+            this.baseButton1.Click += new System.EventHandler(this.baseButton1_Click);
             // 
-            // DataTable01
+            // NormalSerialize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.baseDataGridView1);
-            this.Name = "DataTable01";
-            this.Size = new System.Drawing.Size(486, 280);
-            ((System.ComponentModel.ISupportInitialize)(this.baseDataGridView1)).EndInit();
+            this.Controls.Add(this.baseButton1);
+            this.Name = "NormalSerialize";
+            this.Size = new System.Drawing.Size(591, 503);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Common.Controls.BaseDataGridView baseDataGridView1;
-
+        private Common.Controls.BaseButton baseButton1;
     }
 }

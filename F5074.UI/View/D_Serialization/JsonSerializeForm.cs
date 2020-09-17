@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using F5074.Common.Helper;
 
-namespace F5074.UI.View.DataTable
+namespace F5074.UI.View.D_Serialization
 {
-    public partial class DataTable01 : UserControl
+    public partial class JsonSerializeForm : UserControl
     {
-        public DataTable01()
+        public JsonSerializeForm()
         {
             InitializeComponent();
-
-            this.baseDataGridView1.DataSource = DataTableHelper.InitPivotData();
         }
     }
 }

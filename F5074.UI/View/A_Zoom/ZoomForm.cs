@@ -22,7 +22,7 @@ namespace F5074.UI.View.A_Zoom
             //this.baseChart1.Parent = bp;
             //bp.BackColor = Color.Silver;
             //bp.AutoScroll = true;
-
+            
 
             this.Load += ZoomForm_Load;
         }

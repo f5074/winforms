@@ -65,11 +65,11 @@ namespace F5074.Launcher
 
         private void TreeView1_DoubleClick(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 // https://lambdaexp.tistory.com/19
                 // https://m.blog.naver.com/delight_gruv/130071915177
-                if(this.treeView1.SelectedNode.Name.Contains("F5074.UI"))
+                if (this.treeView1.SelectedNode.Name.Contains("F5074.UI"))
                 {
                     assembly = Assembly.LoadFrom(programPath + "\\F5074.UI.dll");
                 }
@@ -81,11 +81,11 @@ namespace F5074.Launcher
                 tabPage.Controls.Add(tabControl);
                 tabControl1.TabPages.Add(tabPage);
                 tabControl1.SelectedIndex = tabControl1.TabPages.Count - 1;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public List<MenuVo> SearchAssembly(string dllName, string folderName)

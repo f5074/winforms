@@ -35,11 +35,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -93,6 +88,12 @@
     <Compile Include="Controls\BaseTabControl.Designer.cs">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseTableLayoutPanel.Designer.cs">
+      <DependentUpon>BaseTableLayoutPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,31 +106,34 @@
     <Compile Include="Controls\BaseTreeView.Designer.cs">
       <DependentUpon>BaseTreeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FormStatusBar.cs">
+    <Compile Include="Controls\BaseStatusBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FormStatusBar.Designer.cs">
-      <DependentUpon>FormStatusBar.cs</DependentUpon>
+    <Compile Include="Controls\BaseStatusBar.Designer.cs">
+      <DependentUpon>BaseStatusBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ZoomControl.cs">
+    <Compile Include="Controls\BaseZoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ZoomControl.Designer.cs">
-      <DependentUpon>ZoomControl.cs</DependentUpon>
+    <Compile Include="Controls\BaseZoomControl.Designer.cs">
+      <DependentUpon>BaseZoomControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Extension\AssemblyExtension.cs" />
     <Compile Include="Extension\EnumExtension.cs" />
     <Compile Include="Extension\IEnumerableExtension.cs" />
     <Compile Include="Helper\DataTableHelper.cs" />
+    <Compile Include="Helper\OleDbHelper.cs" />
+    <Compile Include="Helper\SeriesHelper.cs" />
     <Compile Include="Model\IParameterizable.cs" />
     <Compile Include="Model\UserComponent.cs" />
+    <Compile Include="Model\ZoomComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Utilities.cs" />
-    <EmbeddedResource Include="Controls\FormStatusBar.resx">
-      <DependentUpon>FormStatusBar.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\BaseStatusBar.resx">
+      <DependentUpon>BaseStatusBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ZoomControl.resx">
-      <DependentUpon>ZoomControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\BaseZoomControl.resx">
+      <DependentUpon>BaseZoomControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using F5074.Common.Model;
 
 namespace F5074.Common.Controls
 {
-    public partial class ZoomControl : UserControl, INotifyPropertyChanged
+    public partial class BaseZoomControl : UserControl, INotifyPropertyChanged
     {
-        public ZoomControl()
+        public BaseZoomControl()
         {
             InitializeComponent();
             this.trackBar1.Minimum = 0;
@@ -24,14 +25,12 @@ namespace F5074.Common.Controls
         private void TrackBar1_ValueChanged(object sender, EventArgs e)
         {
             OnZoomValueChanged();
-            if (this.ZoomChart != null)
-            {
-                this.baseButton1.Text = string.Format("{0}%", trackBar1.Value);
-            }
+            this.baseButton1.Text = string.Format("{0}%", trackBar1.Value);
         }
         public void OnZoomValueChanged()
         {
             OnPropertyChanged("ZoomValue");
+            SyncControls();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -42,6 +41,34 @@ namespace F5074.Common.Controls
             {
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        public void SyncControls()
+        {
+            if(ZoomControls != null)
+            {
+                for (int rowIdx = 0; rowIdx < ZoomControls.Count; rowIdx++)
+                {
+                    if (ZoomControls[rowIdx].Component.Parent.GetType().Name != "Panel")
+                    {
+                        Panel panel = new Panel();
+                        panel.AutoScroll = true;
+                        panel.Dock = DockStyle.Fill;
+                        ZoomControls[rowIdx].Component.Parent.Controls.Add(panel);
+                        panel.Controls.Add(ZoomControls[rowIdx].Component);
+                    }
+
+                    setControlsWidth(ZoomControls[rowIdx].Component);
+                }
+            }
+        }
+
+        public void setControlsWidth(Control _control)
+        {
+            _control.Dock = DockStyle.Fill;
+            int originWidth = _control.Width;
+            _control.Dock = DockStyle.Left;
+            _control.Width = trackBar1.Value;
         }
 
         public BaseChart _ZoomChart;
@@ -69,6 +96,24 @@ namespace F5074.Common.Controls
             }
         }
 
+        public List<ZoomComponent> _ZoomControls;
+
+        [Category("_Extension")]
+        [Browsable(true)]
+        [DisplayName("ZoomControls")]
+        [Description("ZoomControls")]
+        public List<ZoomComponent> ZoomControls
+        {
+            get
+            {
+                return _ZoomControls;
+            }
+            set
+            {
+                this._ZoomControls = value;
+            }
+        }
+
         public int ZoomValue
         {
             get
@@ -81,7 +126,6 @@ namespace F5074.Common.Controls
                 {
                     this.ZoomChart.Width =  Convert.ToInt32(value);
                 }
-
             }
         }
 

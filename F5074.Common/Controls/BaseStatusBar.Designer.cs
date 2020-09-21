@@ -1,6 +1,6 @@
 ﻿namespace F5074.Common.Controls
 {
-    partial class FormStatusBar
+    partial class BaseStatusBar
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.zoomControl1 = new F5074.Common.Controls.ZoomControl();
+            this.zoomControl1 = new F5074.Common.Controls.BaseZoomControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.zoomControl1.Size = new System.Drawing.Size(244, 26);
             this.zoomControl1.TabIndex = 0;
             this.zoomControl1.ZoomChart = null;
-            this.zoomControl1.ZoomValue = 100;
+            this.zoomControl1.ZoomValue = 1000;
             // 
             // FormStatusBar
             // 
@@ -72,6 +72,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private ZoomControl zoomControl1;
+        private BaseZoomControl zoomControl1;
     }
 }

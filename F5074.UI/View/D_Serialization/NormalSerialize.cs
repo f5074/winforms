@@ -31,7 +31,7 @@ namespace F5074.UI.View.D_Serialization
             };
 
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(@"C:\Users\osryu\Desktop\winforms-master\winforms-master\Test.txt", FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream(@".\Test.txt", FileMode.Create, FileAccess.Write);
             var serializer = new DataContractJsonSerializer(typeof(SerialTestVo[]), new[] { typeof(SerialTestVo[]) }, Int32.MaxValue, true, null, false);
             serializer.WriteObject(stream, vo);
             //formatter.Serialize(stream, vo);
@@ -42,7 +42,7 @@ namespace F5074.UI.View.D_Serialization
         {
             
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(@"C:\Users\osryu\Desktop\winforms-master\winforms-master\Test.txt", FileMode.Open, FileAccess.Read);
+            Stream stream = new FileStream(@".\Test.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(stream);
             var serializer = new DataContractJsonSerializer(typeof(SerialTestVo[]), new[] { typeof(SerialTestVo[]) }, Int32.MaxValue, true, null, false);
             SerialTestVo[] arrVo = serializer.ReadObject(stream) as SerialTestVo[];

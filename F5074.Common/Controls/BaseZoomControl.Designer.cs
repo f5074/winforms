@@ -1,6 +1,6 @@
 ﻿namespace F5074.Common.Controls
 {
-    partial class ZoomControl
+    partial class BaseZoomControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.

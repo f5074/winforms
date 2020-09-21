@@ -55,7 +55,7 @@
     <Compile Include="View\A_Zoom\ZoomForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\A_Zoom\ZoomForm.Designer.cs">
+    <Compile Include="View\A_Zoom\ZoomForm.designer.cs">
       <DependentUpon>ZoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\B_Console\EnableConsole.cs">
@@ -70,10 +70,10 @@
     <Compile Include="View\C_DateTime\DateTIme01.Designer.cs">
       <DependentUpon>DateTIme01.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\DataTable\DataTable01.cs">
+    <Compile Include="View\E_DataTable\DataTable01.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\DataTable\DataTable01.Designer.cs">
+    <Compile Include="View\E_DataTable\DataTable01.Designer.cs">
       <DependentUpon>DataTable01.cs</DependentUpon>
     </Compile>
     <Compile Include="View\D_Serialization\JsonSerializeForm.cs">
@@ -107,8 +107,11 @@
     <EmbeddedResource Include="View\A_Zoom\ZoomForm.resx">
       <DependentUpon>ZoomForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\DataTable\DataTable01.resx">
+    <EmbeddedResource Include="View\E_DataTable\DataTable01.resx">
       <DependentUpon>DataTable01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\D_Serialization\JsonSerializeForm.resx">
+      <DependentUpon>JsonSerializeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\D_Serialization\NormalSerialize.resx">
       <DependentUpon>NormalSerialize.cs</DependentUpon>

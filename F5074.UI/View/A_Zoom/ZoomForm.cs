@@ -29,9 +29,9 @@ namespace F5074.UI.View.A_Zoom
 
         void ZoomForm_Load(object sender, EventArgs e)
         {
-            this.basePanel1.AutoScroll = true;
-            formStatusBar1.ZoomChart = this.baseChart1;
-            this.baseChart1.Dock = DockStyle.Left;
+            //this.basePanel1.AutoScroll = true;
+            //formStatusBar1.ZoomChart = this.baseChart1;
+            //this.baseChart1.Dock = DockStyle.Left;
         }
     }
 }

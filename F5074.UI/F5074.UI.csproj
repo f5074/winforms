@@ -89,6 +89,12 @@
       <DependentUpon>NormalSerialize.cs</DependentUpon>
     </Compile>
     <Compile Include="View\D_Serialization\SerialTestVo.cs" />
+    <Compile Include="View\E_DataTable\DataTable02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\E_DataTable\DataTable02.Designer.cs">
+      <DependentUpon>DataTable02.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\D_Serialization\NormalSerialize.resx">
       <DependentUpon>NormalSerialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\E_DataTable\DataTable02.resx">
+      <DependentUpon>DataTable02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewTest.resx">
       <DependentUpon>ViewTest.cs</DependentUpon>

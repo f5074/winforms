@@ -149,5 +149,16 @@ namespace F5074.Common.Utility
 
 
         }
+
+        public void GetEnumList(Enum enums)
+        {
+            string[] sValues = Enum.GetNames(enums.GetType());
+            for (int enumIdx = 0; enumIdx < sValues.Length; enumIdx++)
+            {
+                Enum eVal = (Enum)Enum.Parse(enums.GetType(), sValues[enumIdx]);
+            }
+            Console.WriteLine(string.Join(",", sValues));
+        }
+
     }
 }

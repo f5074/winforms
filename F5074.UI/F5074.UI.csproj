@@ -101,6 +101,12 @@
     <Compile Include="View\E_DataTable\DataTable03.Designer.cs">
       <DependentUpon>DataTable03.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\E_DataTable\DataTable04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\E_DataTable\DataTable04.Designer.cs">
+      <DependentUpon>DataTable04.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QueryExecutor\QueryExecutor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\E_DataTable\DataTable03.resx">
       <DependentUpon>DataTable03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\E_DataTable\DataTable04.resx">
+      <DependentUpon>DataTable04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QueryExecutor\QueryExecutor.resx">
       <DependentUpon>QueryExecutor.cs</DependentUpon>

@@ -30,4 +30,22 @@ namespace F5074.Common.Annotations
             this.IntValue = value;
         }
     }
+
+    public class CaptionAttribute : Attribute {
+        public string CaptionValue { get; protected set; }
+
+        public CaptionAttribute(string value)
+        {
+            this.CaptionValue = value;
+        }
+    }
+
+    public class WidthAttribute : Attribute {
+        public int WidthValue { get; protected set; }
+
+        public WidthAttribute(int value)
+        {
+            this.WidthValue = value;
+        }
+    }
 }

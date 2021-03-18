@@ -11,7 +11,7 @@ using F5074.Common.Helper;
 
 namespace F5074.Common.Utility
 {
-    class Utilities
+    public class Utilities
     {
         public void Linq01()
         {
@@ -58,15 +58,23 @@ namespace F5074.Common.Utility
         {
             public void GetMethodList()
             {
-                MethodInfo[] methodInfos = typeof(T).GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.SuppressChangeType);
-                Array.Sort(methodInfos, delegate(MethodInfo me1, MethodInfo me2)
-                {
-                    return me1.Name.CompareTo(me2.Name);
-                });
+                MethodInfo[] methodInfos = typeof(T).GetMethods();
+                ConstructorInfo[] test = typeof(T).GetConstructors();
 
-                foreach (MethodInfo me in methodInfos)
+                IEnumerable<FieldInfo> testa = typeof(T).GetRuntimeFields();
+
+                typeof(T).GetProperties();
+
+                foreach (FieldInfo me in testa)
                 {
                     Console.WriteLine(me.Name);
+
+                    if (me.FieldType.Name == "BaseTextBox")
+                    {
+
+                        Type type = Type.GetType(me.FieldType.FullName);
+                        //Console.WriteLine("test");
+                    }
                 }
             }
 

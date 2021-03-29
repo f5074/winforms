@@ -46,6 +46,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -132,6 +134,7 @@
     <Compile Include="Helper\DataTableHelper.cs" />
     <Compile Include="Helper\OleDbHelper.cs" />
     <Compile Include="Helper\SeriesHelper.cs" />
+    <Compile Include="Interface\ILocalService.cs" />
     <Compile Include="Model\IParameterizable.cs" />
     <Compile Include="Model\UserComponent.cs" />
     <Compile Include="Model\ZoomComponent.cs" />
@@ -139,6 +142,7 @@
     <Compile Include="Reference\CustomAttributes.cs" />
     <Compile Include="Reference\TypeExtender.cs" />
     <Compile Include="Reference\TypeExtenderShould.cs" />
+    <Compile Include="Service\WCF\WCFService.cs" />
     <Compile Include="Utility\RegistryUtility.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <EmbeddedResource Include="Controls\BaseStatusBar.resx">
@@ -151,6 +155,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

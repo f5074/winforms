@@ -113,6 +113,12 @@
     <Compile Include="View\F_TypeExtension\TypeExtension01.Designer.cs">
       <DependentUpon>TypeExtension01.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\G_WCF\WCF01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\G_WCF\WCF01.Designer.cs">
+      <DependentUpon>WCF01.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QueryExecutor\QueryExecutor.cs">
       <SubType>UserControl</SubType>
     </Compile>

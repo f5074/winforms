@@ -19,16 +19,11 @@ namespace F5074.Daemon
             {
                 ServiceEndpoint ep = host.AddServiceEndpoint(typeof(ILocalService), new WebHttpBinding(), "");
                 host.Open();
-                using (ChannelFactory<ILocalService> cf = new ChannelFactory<ILocalService>(new WebHttpBinding(), "http://localhost:8000"))
+                using (ChannelFactory<ILocalService> cf = new ChannelFactory<ILocalService>(new WebHttpBinding(), "http://localhost:8000/"))
                 {
                     cf.Endpoint.Behaviors.Add(new WebHttpBehavior());
 
                     ILocalService channel = cf.CreateChannel();
-                    System.IO.FileInfo fileInfo = new System.IO.FileInfo("C:\\DEV\\test.pdf");
-                    using (System.IO.FileStream stream =
-                           new System.IO.FileStream("C:\\DEV\\test.pdf", System.IO.FileMode.Open, System.IO.FileAccess.Read))
-
-                        channel.UploadFile(fileInfo.Name, stream);
                 }
                 Console.WriteLine("Press <ENTER> to terminate");
                 Console.ReadLine();

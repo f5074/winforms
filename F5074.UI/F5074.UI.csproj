@@ -119,6 +119,18 @@
     <Compile Include="View\G_WCF\WCF01.Designer.cs">
       <DependentUpon>WCF01.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\H_Resource\Resource01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\H_Resource\Resource01.Designer.cs">
+      <DependentUpon>Resource01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\H_Resource\ResourceFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceFile.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="View\QueryExecutor\QueryExecutor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +164,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\E_DataTable\DataTable04.resx">
       <DependentUpon>DataTable04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\H_Resource\ResourceFile.en-US.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\H_Resource\ResourceFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceFile.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QueryExecutor\QueryExecutor.resx">
       <DependentUpon>QueryExecutor.cs</DependentUpon>

@@ -131,6 +131,12 @@
       <DependentUpon>ResourceFile.resx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="View\I_Xml\Xml01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\I_Xml\Xml01.Designer.cs">
+      <DependentUpon>Xml01.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QueryExecutor\QueryExecutor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,7 +187,11 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="View\I_Xml\test.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\F5074.Common\F5074.Common.csproj">
       <Project>{E0BC19BD-DF46-487E-B3AE-2B9DE79D1B69}</Project>
